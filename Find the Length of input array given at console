@@ -1,0 +1,35 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class LengthofInput
+{
+    public static void main(String args[])throws IOException
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        int number=Integer.parseInt(br.readLine());
+        
+        for(int i=1;i<=number;i++)
+        {
+	System.out.println("Enter Input"+i); 
+            String input=br.readLine();
+            System.out.println(input.split(" ").length);     
+        }
+        
+        br.close();
+    }
+}
+
+
+
+/*Output
+3
+Enter Input1
+1 5 6
+3
+Enter Input2
+2 6 7 8
+4
+Enter Input3
+1 1
+2 */
