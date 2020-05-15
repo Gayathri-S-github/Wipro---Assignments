@@ -1,0 +1,308 @@
+1)
+//Write a program to check if a given number is Positive, Negative, or Zero.
+
+import java.util.Scanner;
+public class Postive_Negative 
+{
+    public static void main(String[] args) 
+    {
+        int n;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number you want to check:");
+        n = s.nextInt();
+        if(n > 0)
+        {
+            System.out.println("The given number "+n+" is Positive");
+        }
+        else if(n < 0)
+        {
+            System.out.println("The given number "+n+" is Negative");
+        }
+        else
+        {
+            System.out.println("The given number "+n+" is neither Positive nor Negative ");
+        }
+    }
+}
+
+2)
+//Write a program to check if a given number is odd or even.
+
+import java.util.Scanner;
+public class Odd_Even 
+{
+    public static void main(String[] args) 
+    {
+        int n;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number you want to check:");
+        n = s.nextInt();
+        if(n % 2 == 0)
+        {
+            System.out.println("The given number "+n+" is Even ");
+        }
+        else
+        {
+            System.out.println("The given number "+n+" is Odd ");
+	}
+    }
+}
+
+3)
+Write a program to check if the program has received command line arguments or not. 
+If the program has not received the values then print "No Values", else print all the values in a single line separated by ,(comma).
+
+public class Sample5 {
+	public static void main (String[] args)
+    {
+                if (args.length ==0)
+            {
+            System.out.println("No Values");
+    }
+        else{
+            for(String i : args)     //for each value in args store in i
+                System.out.print(i+" , ");
+       
+        }
+        }
+}
+
+4) 
+Initialize two character variables in a program and display the characters in alphabetical order.
+import java.util.Scanner;
+
+public class FlowControlStatements04
+{
+
+public static void main(String[] args)
+{
+Scanner s = new Scanner ( System .in);
+
+System.out.println("enter the first character");
+char ch1=s.next().charAt(0);
+
+System.out.println("enter the second character");
+char ch2=s.next().charAt(0);
+
+if (ch1>ch2)
+System.out.println(ch2+" , "+ch1);
+
+else
+System.out.println(ch1+" , "+ch2);
+}
+
+
+}
+
+(OR)
+
+class ABCD
+{
+    public static void main (String[] args)
+    {
+        char item1='a';
+        char item2='b';
+        if (item1>item2)
+            System.out.println(item2+" , "+item1);
+       
+        else
+            System.out.println(item1+" , "+item2);
+    }
+    }
+
+5) 
+Initialize a character variable in a program and if the value is alphabet then print "Alphabet" 
+if it’s a number then print "Digit" and for other characters print "Special Character"
+
+class ABCD
+{
+    public static void main (String[] args)
+    {
+        char item1='a'; //here the initialization is carried out
+               if((item1>96&&item1<123)||(item1>64&&item1<91))
+            System.out.println("Alphabet");
+        else if(item1>47&&item1<58)
+            System.out.println("Digit");
+        else
+            System.out.println("Special Character");
+    }
+    }
+
+
+
+(OR)
+
+public class DigitAlphabetSpecialCharacter {
+public static void main(String args[])
+{
+    Scanner scanner=new Scanner(System.in);
+    char char1 =scanner.next().charAt(0);
+    if(char1>=48 && char1<=57)    //if(char1>=’0’ && c<=’9’)
+    {
+        System.out.print("char is Digit");
+
+    }
+    else if((char1>='a' && char1<='z')||(char1>='A' && char1<='Z'))
+    {
+        System.out.print("char is Alphabet");
+    }
+    else
+    {
+        System.out.print("char is special character");
+
+    }
+}
+
+
+6)
+Write a program to accept gender ("Male" or "Female") and age (1-120) from command line arguments 
+and print the percentage of interest based on the given conditions. 
+ 
+Interest == 8.2%  
+Gender ==> Female 
+Age    ==>1 to 58
+ Interest == 7.6%  Gender ==> Female 
+Age    ==>59 -120
+ Interest == 9.2%  
+Gender ==> Male
+ Age    ==>1-60
+ Interest == 8.3%  
+Gender ==> Male 
+Age    ==>61-120 
+
+
+Public class GenderInterest
+{
+Public static void main(String args[])
+{
+String gender= args[0];
+Int age=Integer.parseInt(args[1]);
+If(gender.equalsIgnoreCase(“Female”))
+{
+If(age>=1 && age<=58)
+System.out.println(“Interest= 8.2%”);
+else if(age>=59  &&  age<=120)
+System.out.println(“Interest=7.6%”);
+}
+else
+{
+If(gender.equalsIgnoreCase(“Female”))
+{
+If(age>=1 && age<=60)
+System.out.println(“Interest= 9.2%”);
+else if(age>=61  &&  age<=120)
+System.out.println(“Interest=8.3%”);
+}
+}
+}
+
+7 
+//Write a program to convert from upper case to lower case and vice versa of an alphabet 
+and print the old character and new character as shown in example (Ex: a->A, M->m).
+
+import java.io.*;
+public class Sample
+{
+public static void main(String args[])
+{
+Scanner scan=new Scanner(System.in);
+char c=scan.next().charAt(0);
+
+if(Character.isLowerCase(c))
+System.out.println(c+"->"+Chracter.toUpperCase(c));
+
+else
+System.out.println(c+"->"+Chracter.toLowerCase(c));
+}
+}
+
+8 
+//Write a program to print the color name, based on color code. 
+If color code in not valid then print "Invalid Code". R->Red, B->Blue, G->Green, O->Orange, Y->Yellow, W->White.
+
+import java.io.*;
+public class Colorcode
+{
+public static void main(String args[])
+{
+Scanner scan=new Scanner(System.in);
+char ch=scan.next().charAt(0);
+switch(ch)
+{
+case 'R': System.out.println("R->Red");
+break;
+case 'B': System.out.println("B->Blue");
+break;
+case 'G': System.out.println("G->Green");
+break;
+case 'O': System.out.println("O->Orange");
+break;
+case 'Y': System.out.println("Y->Yellow");
+break;
+case 'W': System.out.println("W->White");
+break;
+default: System.out.println("Invalid");
+}
+}
+}
+
+9
+//Write a program to print month in words, based on input month in numbers
+//Example1: C:\>java Sample 12 
+//O/P Expected : December 
+ 
+public class IfBasedSolution {
+      public static void main(String[] args) {
+            
+           int monthNumber = Integer.parseInt(args[0]);
+            if (monthNumber == 1)
+                  System.out.println("January");
+            else if (monthNumber == 2)
+                  System.out.println("February");
+            else if (monthNumber == 3)
+                  System.out.println("March");
+            else if (monthNumber == 4)
+                  System.out.println("April");
+            else if (monthNumber == 5)
+                  System.out.println("May");
+            else if (monthNumber == 6)
+                  System.out.println("June");
+            else if (monthNumber == 7)
+                  System.out.println("July");
+            else if (monthNumber == 8)
+                  System.out.println("August");
+            else if (monthNumber == 9)
+                  System.out.println("September");
+            else if (monthNumber == 10)
+                  System.out.println("October");
+            else if (monthNumber == 11)
+                  System.out.println("November");
+            else if (monthNumber == 12)
+                  System.out.println("December");
+            else
+                  System.out.println("Invalid month.");
+      }
+}
+
+10 
+ 
+//Write a program to print numbers from 1 to 10 in a single row with one tab space.
+
+import java.util.Scanner;
+
+public class DisplayNumber
+{
+    public static void main(String args[])
+    {
+int n=10;
+for(int i = 1; i <= 10; i++) 
+{
+
+    System.out.print(i);
+
+    System.out.print(" ");
+
+}
+
+}
+}
