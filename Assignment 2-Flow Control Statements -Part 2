@@ -1,0 +1,163 @@
+11) Write a program to check if a given number is prime or not
+import java.util.*;
+public class checkprime
+{
+public static void main(String args[])
+{
+Scanner scan= new Scanner(System.in);
+int n=scan.nextInt();
+int count=0;
+for(int i=1;i<=n;i++)
+{
+if(n%i==0)
+count++;
+}
+scan.close();
+if(count==2)
+System.out.println("The given number is prime");
+else
+System.out.println("The given number is not prime");
+}
+}
+
+12) 
+Write a program to print even numbers between 23 and 57, each number should be printed in a separate row.
+public class EvenBetweenNumbers
+{
+public static void main(String args[])
+{
+
+for(int i=23;i<=57;i++)
+{
+if(i%2==0)
+System.out.println(i);
+}
+}
+}
+
+13)
+Write a program to print prime numbers between 10 and 99.
+public class checkprimebetweennumers
+{
+public static void main(String args[])
+{
+int i,temp;
+for(i=10;i<=99;i++)
+{
+temp=0;
+for(int j=2;j<i;j++)
+{
+if(i%j==0)
+{
+temp=1;
+break;
+}
+}
+if(temp==0)
+System.out.println(i);
+}
+}
+}
+
+15)
+Write a program to print * in Floyds format (using for and while loop) 
+ 
+* 
+*  *
+ *  *   * 
+ Example1: C:\>java Sample 
+ O/P Expected : Please enter an integer number 
+ 
+Example1: C:\>java Sample 3
+ O/P Expected : 
+*        
+*  *  
+ *  *  *
+public class FloydsForm
+{
+public static void main(String args[])
+{
+int n=Integer.parseInt(args[0]);
+for(int i=1;i<=n;i++)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.print("* ");
+}
+System.out.println();
+}
+}
+}
+
+
+16)
+Write a program to add all the values in a given number and print. Ex: 1234->10
+
+import java.util.*;
+public class DigitsSum
+{
+public static void main(String args[])
+{
+Scanner scan= new Scanner(System.in);
+int rem,sum=0;
+int no=scan.nextInt();
+while(no!=0)
+{
+rem=no%10;
+sum=sum+rem;
+no=no/10;
+}
+System.out.println(sum);
+}
+}
+
+17)
+
+Write a program to reverse a given number and print 
+ 
+Eg1) I/P: 1234 O/P:4321 
+ 
+Eg2) I/P:1004 O/P:4001
+import java.util.*;
+public class ReverseNumber
+{
+public static void main(String args[])
+{
+Scanner scan= new Scanner(System.in);
+int n=scan.nextInt();
+int rem,sum=0;
+while(n!=0)
+{
+rem=n%10;
+System.out.print(rem);
+n=n/10;
+}
+}
+}
+
+18)
+ Write a Java program to find if the given number is palindrome or not
+
+import java.util.*;
+public class PalindromeNumber
+{
+public static void main(String args[])
+{
+Scanner scan= new Scanner(System.in);
+int n=scan.nextInt();
+int temp=n;
+int rem,palin=0;
+while(temp!=0)
+{
+rem=temp%10;
+palin=palin*10+rem;
+temp=temp/10;
+}
+if(n==palin)
+System.out.println(n+" is a palindrome");
+else
+System.out.println(n+" is not a palindrome");
+}
+}
+
+
