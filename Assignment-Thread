@@ -1,0 +1,28 @@
+// Create two threads and assign names ‘Scooby’ and ‘Shaggy’ to the two threads. Display both thread names.
+class code extends Thread {
+	code(String name) 
+    { 
+        // call to constructor of  
+        // the Thread class. 
+        super(name); 
+    } 
+	public void run() {
+		System.out.println("I'm " + Thread.currentThread().getName());
+	}
+}
+public class ThreadAssignment1 {
+
+	public static void main(String[] args) {
+		code t1 = new code("Scooby"); 
+		
+		code t2 = new code("Shaggy"); 
+			
+		t1.start();
+		t2.start();
+	}
+
+}
+/* Output:
+I'm Scooby
+I'm Shaggy
+*/
