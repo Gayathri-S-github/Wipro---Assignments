@@ -1,0 +1,48 @@
+/* Create three threads- with different priorities – MAX, MIN, NORM- 
+and start the threads at the same time. Observe the completion of the threads. */
+
+class ThreadAssignment extends Thread { 
+	
+	public ThreadAssignment(String string) {
+		
+		super(string);
+	}
+	
+ public void run(){  
+  for(int i=1;i<=5;i++)
+  {  
+     System.out.println(Thread.currentThread().getName()+i);  
+  }  
+ } 
+}
+ class ThreadAssignment5 {
+public static void main(String args[]){  
+	ThreadAssignment t1=new ThreadAssignment("Min Thread");  
+	ThreadAssignment t2=new ThreadAssignment("Max Thread");  
+	ThreadAssignment t3=new ThreadAssignment("Normal Thread");  
+	t1.setPriority(Thread.MIN_PRIORITY);  
+	  t2.setPriority(Thread.MAX_PRIORITY); 
+	  	t3.setPriority(Thread.NORM_PRIORITY);
+ t1.start();   
+ t2.start();  
+ t3.start();  
+ }  
+}
+
+/* Output
+Max Thread1
+Max Thread2
+Max Thread3
+Max Thread4
+Max Thread5
+Min Thread1
+Normal Thread1
+Min Thread2
+Normal Thread2
+Normal Thread3
+Normal Thread4
+Normal Thread5
+Min Thread3
+Min Thread4
+Min Thread5
+*/
