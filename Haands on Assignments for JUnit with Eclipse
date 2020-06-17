@@ -1,0 +1,35 @@
+// DailyTasks.java
+package com.wipro.task;
+import java.util.*;
+public class DailyTasks {
+	public String doStringConcat (String s1, String s2) {
+		return s1+" "+s2;
+	}
+	public int[] sortValues(int arr[]){
+		Arrays.sort(arr);
+		return arr;
+	}
+	public boolean checkPresence(String str,String a){
+		return str.contains(a);
+	}
+
+}
+
+//TestStringConcat.java
+package com.wipro.task;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestStringConcat {
+
+	@Test
+	void test() {
+		//fail("Not yet implemented");
+		DailyTasks dt=new DailyTasks();
+		String result=dt.doStringConcat("Wipro","Technologies");
+		assertEquals("Wipro Technologies",result);
+	}
+
+}
