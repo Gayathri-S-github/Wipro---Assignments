@@ -33,3 +33,24 @@ class TestStringConcat {
 	}
 
 }
+
+//TestSort.java
+package com.wipro.task;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestSort {
+
+	@Test
+	void test() {
+		//fail("Not yet implemented");
+		DailyTasks dt=new DailyTasks();
+		int result[]=dt.sortValues(new int[]{3,2,1,4});
+		int expected[] = {1,2,3,4};
+		assertArrayEquals(expected,result);
+		
+	}
+
+}
